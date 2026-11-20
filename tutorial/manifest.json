@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "pasang-admin-chat",
+    "file": "content/pasang-admin-chat.md",
+    "title": "Cara pasang AI admin chat buat toko online",
+    "category": "AI Agent",
+    "level": "Pemula",
+    "duration": "[DURASI]",
+    "order": "1",
+    "image": "",
+    "excerpt": "Panduan ini buat kamu yang mau toko online dibalas otomatis tanpa pelanggan sadar lagi ngobrol sama AI."
+  },
+  {
+    "slug": "naskah-tiktok-30-hari",
+    "file": "content/naskah-tiktok-30-hari.md",
+    "title": "Bikin naskah TikTok 30 hari pakai AI dalam sekali duduk",
+    "category": "Konten",
+    "level": "Pemula",
+    "duration": "[DURASI]",
+    "order": "2",
+    "image": "",
+    "excerpt": "Nggak perlu pusing nyari ide konten tiap hari. Ikuti langkah ini buat dapat 30 naskah sekaligus."
+  },
+  {
+    "slug": "laporan-stok-telegram",
+    "file": "content/laporan-stok-telegram.md",
+    "title": "Laporan stok dan penjualan otomatis ke Telegram",
+    "category": "AI Agent",
+    "level": "Menengah",
+    "duration": "[DURASI]",
+    "order": "3",
+    "image": "",
+    "excerpt": "Biar kamu nggak perlu cek dashboard toko tiap jam, laporan bisa langsung masuk ke Telegram."
+  },
+  {
+    "slug": "worksheet-ai-canva",
+    "file": "content/worksheet-ai-canva.md",
+    "title": "Bikin worksheet anak sendiri pakai AI + Canva",
+    "category": "Edukasi",
+    "level": "Pemula",
+    "duration": "[DURASI]",
+    "order": "4",
+    "image": "",
+    "excerpt": "Mau bikin worksheet sendiri buat anak atau murid? Kombinasi AI dan Canva bikin prosesnya cepat."
+  }
+]

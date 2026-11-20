@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Worksheet Anak – Bubblebss</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+<nav class="nav container">
+<a href="/" class="nav-brand">
+<svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="14" cy="20" r="11" fill="#2F5BEA"></circle><circle cx="26" cy="11" r="7" fill="#F97316"></circle><circle cx="28" cy="26" r="4" fill="#9DB4F7"></circle></svg>
+<span><strong>Bubblebss</strong></span>
+</a>
+<div class="nav-links">
+<a href="/ai-agent/">AI Agent</a>
+<a href="/project/">Project</a>
+<a href="/game/">Game Edukasi</a>
+<a href="/worksheet/">Worksheet</a>
+<a href="/berita/">Berita</a>
+<a href="/tutorial/">Tutorial</a>
+<a href="/#kontak" class="nav-cta">Konsultasi Gratis</a>
+</div>
+</nav>
+</header>
+
+<section class="section">
+<div class="worksheet-section">
+<div class="worksheet-copy">
+<span class="eyebrow eyebrow-blue">Worksheet by Bubblearn</span>
+<h2 class="section-title">Lembar belajar seru, tinggal download dan print.</h2>
+<p class="section-lede">Format PDF ukuran A4. Cocok buat orang tua, guru TK/SD, dan les privat.</p>
+<a href="#" class="btn btn-orange" style="align-self:flex-start;margin-top:8px">Lihat Semua di Lynk</a>
+</div>
+<div id="worksheet-grid" class="worksheet-grid">
+<p class="empty-state">Memuat worksheet…</p>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-brand-row"><svg width="32" height="32" viewBox="0 0 36 36" aria-hidden="true"><circle cx="14" cy="20" r="11" fill="#9DB4F7"></circle><circle cx="26" cy="11" r="7" fill="#F97316"></circle><circle cx="28" cy="26" r="4" fill="#FFFFFF"></circle></svg><strong>Bubblebss</strong></div>
+<p>AI agent untuk UMKM dan konten edukasi untuk anak Indonesia.</p>
+</div>
+<div class="footer-cols">
+<div class="footer-col"><strong>Layanan</strong><a href="/ai-agent/">AI Agent UMKM</a><a href="/ai-agent/">AI Content Creator</a><a href="/project/">Project Kami</a></div>
+<div class="footer-col"><strong>Edukasi</strong><a href="/game/">Game Edukasi</a><a href="/worksheet/">Worksheet</a></div>
+<div class="footer-col"><strong>Belajar</strong><a href="/berita/">Berita</a><a href="/tutorial/">Tutorial</a></div>
+<div class="footer-col"><strong>Ikuti</strong><a href="#">Instagram</a><a href="#">TikTok</a></div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Bubblebss. Semua hak dilindungi.</div>
+</footer>
+
+<script src="../assets/articles.js"></script>
+<script>
+(async function () {
+  const grid = document.getElementById('worksheet-grid');
+  try {
+    const items = await loadManifest('manifest.json');
+    const cards = items.map(item => `
+      <div class="worksheet-card">
+        ${item.image ? `<img src="${item.image}" alt="${item.title}" style="width:100%;border-radius:12px;margin-bottom:4px">` : ''}
+        <strong class="title">${item.title}</strong>
+        <span class="desc">${item.excerpt}</span>
+        <div class="worksheet-price-row"><strong>Rp${item.price}</strong><a href="#">Beli</a></div>
+      </div>
+    `).join('');
+    const bundle = `
+      <div class="worksheet-bundle">
+        <div><strong>Paket Bundling Semua Kategori</strong><div class="label">Lebih hemat buat yang mau lengkap sekaligus.</div></div>
+        <a href="#" class="btn btn-sm btn-white">Rp[HARGA] · Ambil Paket</a>
+      </div>
+    `;
+    grid.innerHTML = cards + bundle;
+  } catch (e) {
+    grid.innerHTML = '<p class="empty-state">Gagal memuat daftar worksheet.</p>';
+  }
+})();
+</script>
+</body>
+</html>

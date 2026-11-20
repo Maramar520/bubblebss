@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "calistung",
+    "file": "content/calistung.md",
+    "title": "Calistung",
+    "price": "[HARGA]",
+    "order": "1",
+    "image": "",
+    "excerpt": "Baca, tulis, hitung dasar untuk TK – kelas 2."
+  },
+  {
+    "slug": "mewarnai-motorik",
+    "file": "content/mewarnai-motorik.md",
+    "title": "Mewarnai & Motorik",
+    "price": "[HARGA]",
+    "order": "2",
+    "image": "",
+    "excerpt": "Mewarnai, menebalkan garis, dan menggunting."
+  },
+  {
+    "slug": "sains-anak",
+    "file": "content/sains-anak.md",
+    "title": "Sains Anak",
+    "price": "[HARGA]",
+    "order": "3",
+    "image": "",
+    "excerpt": "Tata surya, tumbuhan, hewan, dan percobaan rumahan."
+  },
+  {
+    "slug": "english-for-kids",
+    "file": "content/english-for-kids.md",
+    "title": "English for Kids",
+    "price": "[HARGA]",
+    "order": "4",
+    "image": "",
+    "excerpt": "Kosakata, flashcard, dan latihan kalimat sederhana."
+  }
+]

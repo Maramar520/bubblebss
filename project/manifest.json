@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "project-fashion",
+    "file": "content/project-fashion.md",
+    "title": "[NAMA PROJECT]",
+    "category": "Fashion",
+    "chip": "chip-blue",
+    "stat1_label": "Kecepatan respon",
+    "stat1_value": "[HASIL]",
+    "stat2_label": "Pesanan tercatat",
+    "stat2_value": "[HASIL]",
+    "order": "1",
+    "image": "",
+    "excerpt": "Toko fashion online yang admin chat-nya tadinya kewalahan balas pesan di jam sibuk. Sekarang dibantu AI Agent UMKM buat jawab chat dan catat pesanan otomatis."
+  },
+  {
+    "slug": "project-fnb",
+    "file": "content/project-fnb.md",
+    "title": "[NAMA PROJECT]",
+    "category": "F&B",
+    "chip": "chip-orange",
+    "stat1_label": "Konten per bulan",
+    "stat1_value": "[HASIL]",
+    "stat2_label": "Waktu dihemat",
+    "stat2_value": "[HASIL]",
+    "order": "2",
+    "image": "",
+    "excerpt": "Usaha makanan rumahan yang kesulitan bikin konten promosi tiap hari. Sekarang jadwal konten dan naskah TikTok-nya dibikinin AI Content Creator."
+  },
+  {
+    "slug": "project-retail",
+    "file": "content/project-retail.md",
+    "title": "[NAMA PROJECT]",
+    "category": "Retail",
+    "chip": "chip-green",
+    "stat1_label": "Selisih stok",
+    "stat1_value": "[HASIL]",
+    "stat2_label": "Laporan per hari",
+    "stat2_value": "[HASIL]",
+    "order": "3",
+    "image": "",
+    "excerpt": "Toko kelontong online yang stoknya sering nggak sinkron dengan pesanan. Sekarang laporan stok dan penjualan masuk otomatis tiap hari ke Telegram pemilik."
+  }
+]

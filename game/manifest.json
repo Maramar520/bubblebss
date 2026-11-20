@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "science-village",
+    "file": "content/science-village.md",
+    "title": "Science Village",
+    "category": "Sains",
+    "chip": "chip-green",
+    "status": "demo",
+    "cta_label": "Coba demo",
+    "order": "1",
+    "image": "",
+    "excerpt": "Jadi ilmuwan cilik dan bantu warga desa pakai percobaan sains sederhana."
+  },
+  {
+    "slug": "cosmic-science-adventure",
+    "file": "content/cosmic-science-adventure.md",
+    "title": "Cosmic Science Adventure",
+    "category": "Antariksa",
+    "chip": "chip-blue",
+    "status": "demo",
+    "cta_label": "Coba demo",
+    "order": "2",
+    "image": "",
+    "excerpt": "Jelajahi tata surya bareng Little Space Explorers dan kenali planet-planet."
+  },
+  {
+    "slug": "petualangan-nusantara",
+    "file": "content/petualangan-nusantara.md",
+    "title": "Petualangan Nusantara",
+    "category": "Budaya Nusantara",
+    "chip": "chip-cyan",
+    "status": "demo",
+    "cta_label": "Coba demo",
+    "order": "3",
+    "image": "",
+    "excerpt": "Keliling 4 pulau Indonesia, kenali budaya, makanan, dan alamnya."
+  },
+  {
+    "slug": "luminera",
+    "file": "content/luminera.md",
+    "title": "Luminera",
+    "category": "Berkebun & Karakter",
+    "chip": "chip-orange",
+    "status": "segera",
+    "cta_label": "Segera hadir",
+    "order": "4",
+    "image": "",
+    "excerpt": "Rawat kebun, bantu teman, dan belajar tanggung jawab di desa yang cozy."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "apa-itu-ai-agent",
+    "file": "content/apa-itu-ai-agent.md",
+    "title": "Apa itu AI agent, dan kenapa UMKM perlu mulai kenal sekarang?",
+    "category": "Berita AI",
+    "date": "[TANGGAL]",
+    "order": "1",
+    "image": "",
+    "excerpt": "Bedanya chatbot biasa sama AI agent yang bisa beneran ngerjain tugas toko."
+  },
+  {
+    "slug": "tren-tiktok-shopee",
+    "file": "content/tren-tiktok-shopee.md",
+    "title": "Tren jualan di TikTok Shop dan Shopee yang perlu kamu pantau",
+    "category": "UMKM",
+    "date": "[TANGGAL]",
+    "order": "2",
+    "image": "",
+    "excerpt": "Rangkuman perubahan fitur dan aturan marketplace terbaru."
+  },
+  {
+    "slug": "screen-time-sehat",
+    "file": "content/screen-time-sehat.md",
+    "title": "Screen time yang sehat: kapan game bisa jadi alat belajar anak?",
+    "category": "Edukasi",
+    "date": "[TANGGAL]",
+    "order": "3",
+    "image": "",
+    "excerpt": "Tips buat orang tua supaya main game tetap ada manfaatnya."
+  }
+]

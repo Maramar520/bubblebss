@@ -1,0 +1,95 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "berita"
+    label: "Berita"
+    folder: "berita/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Kategori", name: "category", widget: "select", options: ["Berita AI", "UMKM", "Edukasi"] }
+      - { label: "Tanggal", name: "date", widget: "string", hint: "Contoh: 12 Januari 2026" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Gambar", name: "image", widget: "image", required: false }
+      - { label: "Ringkasan singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
+      - { label: "Isi artikel", name: "body", widget: "markdown" }
+
+  - name: "tutorial"
+    label: "Tutorial"
+    folder: "tutorial/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Kategori", name: "category", widget: "select", options: ["AI Agent", "Konten", "Edukasi"] }
+      - { label: "Level", name: "level", widget: "select", options: ["Pemula", "Menengah", "Lanjutan"] }
+      - { label: "Durasi (menit)", name: "duration", widget: "string" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Gambar", name: "image", widget: "image", required: false }
+      - { label: "Ringkasan singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
+      - { label: "Isi tutorial", name: "body", widget: "markdown" }
+
+  - name: "game"
+    label: "Game Edukasi"
+    folder: "game/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Judul Game", name: "title", widget: "string" }
+      - { label: "Kategori", name: "category", widget: "string" }
+      - { label: "Warna chip", name: "chip", widget: "select", options: ["chip-green", "chip-blue", "chip-cyan", "chip-orange"] }
+      - { label: "Status", name: "status", widget: "select", options: ["demo", "segera"] }
+      - { label: "Teks tombol", name: "cta_label", widget: "string", default: "Coba demo" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Gambar thumbnail", name: "image", widget: "image", required: false }
+      - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
+      - { label: "Deskripsi lengkap (opsional)", name: "body", widget: "markdown", required: false }
+
+  - name: "worksheet"
+    label: "Worksheet"
+    folder: "worksheet/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Judul Worksheet", name: "title", widget: "string" }
+      - { label: "Harga (angka saja)", name: "price", widget: "string", hint: "Contoh: 25000" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Gambar sampul", name: "image", widget: "image", required: false }
+      - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
+      - { label: "Deskripsi lengkap (opsional)", name: "body", widget: "markdown", required: false }
+
+  - name: "project"
+    label: "Project Kami"
+    folder: "project/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Nama Project", name: "title", widget: "string" }
+      - { label: "Kategori", name: "category", widget: "string" }
+      - { label: "Warna chip", name: "chip", widget: "select", options: ["chip-green", "chip-blue", "chip-cyan", "chip-orange"] }
+      - { label: "Label statistik 1", name: "stat1_label", widget: "string", default: "Hasil" }
+      - { label: "Nilai statistik 1", name: "stat1_value", widget: "string" }
+      - { label: "Label statistik 2", name: "stat2_label", widget: "string", default: "Hasil" }
+      - { label: "Nilai statistik 2", name: "stat2_value", widget: "string" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Gambar/screenshot", name: "image", widget: "image", required: false }
+      - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
+      - { label: "Ceritanya (opsional)", name: "body", widget: "markdown", required: false }

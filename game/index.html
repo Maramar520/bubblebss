@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Game Edukasi – Bubblebss</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+<nav class="nav container">
+<a href="/" class="nav-brand">
+<svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="14" cy="20" r="11" fill="#2F5BEA"></circle><circle cx="26" cy="11" r="7" fill="#F97316"></circle><circle cx="28" cy="26" r="4" fill="#9DB4F7"></circle></svg>
+<span><strong>Bubblebss</strong></span>
+</a>
+<div class="nav-links">
+<a href="/ai-agent/">AI Agent</a>
+<a href="/project/">Project</a>
+<a href="/game/">Game Edukasi</a>
+<a href="/worksheet/">Worksheet</a>
+<a href="/berita/">Berita</a>
+<a href="/tutorial/">Tutorial</a>
+<a href="/#kontak" class="nav-cta">Konsultasi Gratis</a>
+</div>
+</nav>
+</header>
+
+<section class="game-section">
+<div class="section">
+<div class="section-head-row">
+<div class="section-head">
+<span class="eyebrow" style="color:#B4500F">Game Edukasi</span>
+<h2 class="section-title">Belajar sains dan budaya lewat petualangan 3D.</h2>
+<p class="section-lede" style="color:#5A3A20">Dibuat khusus buat anak SD Indonesia. Main langsung di browser, nggak perlu install.</p>
+</div>
+<a href="#" class="btn btn-sm btn-orange">Lihat Semua di Lynk</a>
+</div>
+<p class="muted" style="margin:-8px 0 0">Yang tampil di sini demo gratisnya. Versi lengkap tiap game ada di Lynk.</p>
+
+<div class="target-note">
+<span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B4500F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5l3 2"></path></svg></span>
+<p><strong>Buat siapa Game Edukasi ini?</strong>Buat orang tua yang mau anaknya belajar sambil main, guru TK/SD yang cari media ajar interaktif di kelas, dan anak SD sebagai pemainnya langsung.</p>
+</div>
+
+<div id="game-grid" class="game-grid">
+<p class="empty-state">Memuat game…</p>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-brand-row"><svg width="32" height="32" viewBox="0 0 36 36" aria-hidden="true"><circle cx="14" cy="20" r="11" fill="#9DB4F7"></circle><circle cx="26" cy="11" r="7" fill="#F97316"></circle><circle cx="28" cy="26" r="4" fill="#FFFFFF"></circle></svg><strong>Bubblebss</strong></div>
+<p>AI agent untuk UMKM dan konten edukasi untuk anak Indonesia.</p>
+</div>
+<div class="footer-cols">
+<div class="footer-col"><strong>Layanan</strong><a href="/ai-agent/">AI Agent UMKM</a><a href="/ai-agent/">AI Content Creator</a><a href="/project/">Project Kami</a></div>
+<div class="footer-col"><strong>Edukasi</strong><a href="/game/">Game Edukasi</a><a href="/worksheet/">Worksheet</a></div>
+<div class="footer-col"><strong>Belajar</strong><a href="/berita/">Berita</a><a href="/tutorial/">Tutorial</a></div>
+<div class="footer-col"><strong>Ikuti</strong><a href="#">Instagram</a><a href="#">TikTok</a></div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Bubblebss. Semua hak dilindungi.</div>
+</footer>
+
+<script src="../assets/articles.js"></script>
+<script>
+(async function () {
+  const thumbBg = { 'chip-green': '#DCF3E4', 'chip-blue': '#E6EDFD', 'chip-cyan': '#D9F0F5', 'chip-orange': '#FFF1E6' };
+  const thumbStroke = { 'chip-green': '#17643A', 'chip-blue': '#1E3FAE', 'chip-cyan': '#0E5A6B', 'chip-orange': '#B4500F' };
+  const grid = document.getElementById('game-grid');
+  try {
+    const items = await loadManifest('manifest.json');
+    if (!items.length) {
+      grid.innerHTML = '<p class="empty-state">Belum ada game.</p>';
+      return;
+    }
+    grid.innerHTML = items.map(item => {
+      const thumb = item.image
+        ? `<img src="${item.image}" alt="${item.title}" style="width:100%;height:150px;object-fit:cover">`
+        : `<div class="game-thumb" style="background:${thumbBg[item.chip] || '#E6EDFD'}">
+             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="${thumbStroke[item.chip] || '#1E3FAE'}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5"></rect><path d="M7 11v3M5.5 12.5h3"></path><circle cx="16" cy="11.5" r="1"></circle><circle cx="18" cy="14" r="1"></circle></svg>
+           </div>`;
+      return `
+        <article class="game-card">
+          ${thumb}
+          <div class="game-body">
+            <span class="chip ${item.chip || 'chip-blue'}">${item.category}</span>
+            <h3>${item.title}</h3>
+            <p>${item.excerpt}</p>
+            <a href="#" class="game-link">${item.cta_label || 'Coba demo'} →</a>
+          </div>
+        </article>
+      `;
+    }).join('');
+  } catch (e) {
+    grid.innerHTML = '<p class="empty-state">Gagal memuat daftar game.</p>';
+  }
+})();
+</script>
+</body>
+</html>
