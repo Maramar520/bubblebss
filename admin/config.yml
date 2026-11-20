@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Maramar520/https-github.com-Maramar520-bubblebss
+  repo: Maramar520/bubblebss
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
