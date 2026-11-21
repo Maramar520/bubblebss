@@ -45,7 +45,8 @@ ul{margin:0;padding:0;list-style:none}
 .nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px}
 .nav-brand{display:flex;align-items:center;gap:10px;color:var(--navy)}
 .nav-brand strong{font-weight:800;font-size:22px;letter-spacing:-0.02em}
-.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 22px;font-size:15px;font-weight:600}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px;font-size:15px;font-weight:600}
+.nav-cta{margin-top:4px}
 .nav-links a{color:var(--navy-text);padding:10px 0}
 .nav-cta{background:var(--blue);color:#FFFFFF !important;padding:11px 20px;border-radius:999px}
 
