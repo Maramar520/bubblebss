@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SECTIONS = ['berita', 'tutorial', 'game', 'worksheet'];
+const SECTIONS = ['berita', 'tutorial', 'game', 'worksheet', 'project'];
 
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);

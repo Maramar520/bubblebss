@@ -9,7 +9,8 @@ berita/                list + detail (artikel.html?slug=...), content in berita/
 tutorial/              same pattern as berita/
 game/                  list, content in game/content/*.md
 worksheet/             list, content in worksheet/content/*.md
-assets/articles.js     shared markdown/manifest loader (used by all 4 sections)
+project/               list, content in project/content/*.md
+assets/articles.js     shared markdown/manifest loader (used by all 5 sections)
 assets/uploads/        images uploaded via the admin dashboard land here
 scripts/build-manifests.js   reads every section's content/*.md frontmatter, writes its manifest.json
 admin/                 Decap CMS dashboard (config.yml + index.html)
@@ -17,7 +18,7 @@ admin/                 Decap CMS dashboard (config.yml + index.html)
 
 ## Add content by hand
 
-1. Drop a `.md` file into `<section>/content/` with frontmatter matching the other files in that folder (title, order, image, plus section-specific fields — category/date for berita, level/duration for tutorial, chip/status/cta_label for game, price for worksheet).
+1. Drop a `.md` file into `<section>/content/` with frontmatter matching the other files in that folder (title, order, image, plus section-specific fields — category/date for berita, level/duration for tutorial, chip/status/cta_label for game, price for worksheet, chip/stat1_*/stat2_* for project).
 2. Run `node scripts/build-manifests.js` to regenerate that section's `manifest.json` (Netlify/Vercel also run this automatically on every deploy — see `netlify.toml` / `vercel.json`).
 
 If `excerpt` is left blank, the build script fills it in from the markdown's first paragraph.
@@ -39,7 +40,7 @@ After that, saving an entry in `/admin/` commits a `.md` file to the repo, Netli
 
 ## Placeholders
 
-Search for `[HARGA]`, `[NOMOR]`, `[TANGGAL]`, `[DURASI]` across the project and replace with real values before going live.
+Search for `[HARGA]`, `[NOMOR]`, `[TANGGAL]`, `[DURASI]`, `[NAMA PROJECT]`, `[HASIL]` across the project and replace with real values before going live.
 
 ## Deploy — Netlify
 

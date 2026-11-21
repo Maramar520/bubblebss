@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Project Kami – Bubblebss</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+<nav class="nav container">
+<a href="/" class="nav-brand">
+<svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="72" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="68" letter-spacing="-6" text-anchor="middle" fill="#14213D">BL</text></svg>
+</a>
+<div class="nav-links">
+<a href="/ai-agent/">AI Agent</a>
+<a href="/project/">Project</a>
+<a href="/game/">Game Edukasi</a>
+<a href="/worksheet/">Worksheet</a>
+<a href="/berita/">Berita</a>
+<a href="/tutorial/">Tutorial</a>
+<a href="/#kontak" class="nav-cta">Konsultasi Gratis</a>
+</div>
+</nav>
+</header>
+
+<section class="page-hero">
+<div class="container">
+<span class="eyebrow eyebrow-blue">Project Kami</span>
+<h1 class="section-title">UMKM yang sudah kami bantu jalan otomatis.</h1>
+<p class="section-lede">Beberapa contoh toko yang AI agent-nya sudah aktif pasang dan kerja harian.</p>
+</div>
+</section>
+
+<section class="section">
+<div id="project-grid" class="project-grid">
+<p class="empty-state">Memuat project…</p>
+</div>
+</section>
+
+<section class="cta-wrap">
+<div class="cta-box">
+<div class="cta-copy">
+<h2>Mau toko kamu jadi project berikutnya?</h2>
+<p>Konsultasi gratis 15 menit, ceritain bisnismu, kita cariin AI agent yang paling pas.</p>
+</div>
+<div class="cta-actions">
+<a href="/#kontak" class="btn btn-white">Chat WhatsApp [NOMOR]</a>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-brand-row"><svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="72" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="68" letter-spacing="-6" text-anchor="middle" fill="#FFFFFF">BL</text></svg></div>
+<p>AI agent untuk UMKM dan konten edukasi untuk anak Indonesia.</p>
+</div>
+<div class="footer-cols">
+<div class="footer-col"><strong>Layanan</strong><a href="/ai-agent/">AI Agent UMKM</a><a href="/ai-agent/">AI Content Creator</a><a href="/project/">Project Kami</a></div>
+<div class="footer-col"><strong>Edukasi</strong><a href="/game/">Game Edukasi</a><a href="/worksheet/">Worksheet</a></div>
+<div class="footer-col"><strong>Belajar</strong><a href="/berita/">Berita</a><a href="/tutorial/">Tutorial</a></div>
+<div class="footer-col"><strong>Ikuti</strong><a href="#">Instagram</a><a href="#">TikTok</a></div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Bubblebss. Semua hak dilindungi.</div>
+</footer>
+
+<script src="../assets/articles.js"></script>
+<script>
+(async function () {
+  const grid = document.getElementById('project-grid');
+  try {
+    const items = await loadManifest('manifest.json');
+    if (!items.length) {
+      grid.innerHTML = '<p class="empty-state">Belum ada project.</p>';
+      return;
+    }
+    grid.innerHTML = items.map(item => `
+      <article class="project-card">
+        ${item.image ? `<img src="${item.image}" alt="${item.title}" style="width:100%;border-radius:14px">` : ''}
+        <span class="chip ${item.chip || 'chip-blue'}">${item.category}</span>
+        <h3>${item.title}</h3>
+        <p>${item.excerpt}</p>
+        <div class="project-stats">
+          <div class="project-stat"><strong>${item.stat1_value}</strong><span>${item.stat1_label}</span></div>
+          <div class="project-stat"><strong>${item.stat2_value}</strong><span>${item.stat2_label}</span></div>
+        </div>
+      </article>
+    `).join('');
+  } catch (e) {
+    grid.innerHTML = '<p class="empty-state">Gagal memuat daftar project.</p>';
+  }
+})();
+</script>
+</body>
+</html>

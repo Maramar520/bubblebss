@@ -79,3 +79,23 @@ collections:
       - { label: "Gambar sampul", name: "image", widget: "image", required: false }
       - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
       - { label: "Deskripsi lengkap (opsional)", name: "body", widget: "markdown", required: false }
+
+  - name: "project"
+    label: "Project Kami"
+    folder: "project/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Nama Project", name: "title", widget: "string" }
+      - { label: "Kategori", name: "category", widget: "string" }
+      - { label: "Warna chip", name: "chip", widget: "select", options: ["chip-green", "chip-blue", "chip-cyan", "chip-orange"] }
+      - { label: "Label statistik 1", name: "stat1_label", widget: "string", default: "Hasil" }
+      - { label: "Nilai statistik 1", name: "stat1_value", widget: "string" }
+      - { label: "Label statistik 2", name: "stat2_label", widget: "string", default: "Hasil" }
+      - { label: "Nilai statistik 2", name: "stat2_value", widget: "string" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Gambar/screenshot", name: "image", widget: "image", required: false }
+      - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
+      - { label: "Ceritanya (opsional)", name: "body", widget: "markdown", required: false }
