@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Website – Bubblebss</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+<nav class="nav container">
+<a href="/" class="nav-brand">
+<img src="../assets/logo-bl.png" alt="Bubblebss" style="height:44px;width:auto;display:block">
+</a>
+<div class="nav-links">
+<a href="/ai-agent/">AI Agent</a>
+<a href="/website/">Website</a>
+<a href="/game/">Game</a>
+<a href="/worksheet/">Worksheet</a>
+<a href="/portofolio/">Portofolio</a>
+<a href="/berita/">Berita</a>
+<a href="/tutorial/">Tutorial</a>
+<a href="/#kontak" class="nav-cta">Konsultasi Gratis</a>
+</div>
+</nav>
+</header>
+
+<section class="page-hero">
+<div class="container">
+<span class="eyebrow eyebrow-blue">Website</span>
+<h1 class="section-title">Website bisnis yang rapi, cepat, dan enak dibuka di HP.</h1>
+<p class="section-lede">Dari landing page promo sampai website toko lengkap. Bisa sekalian dipasang AI agent biar pengunjung langsung dilayani.</p>
+</div>
+</section>
+
+<section class="section">
+<div id="website-grid" class="agent-grid">
+<p class="empty-state">Memuat paket Website…</p>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-brand-row"><img src="../assets/logo-bl-white.png" alt="Bubblebss" style="height:40px;width:auto;display:block"></div>
+<p>AI agent, website, dan tempat belajar AI untuk UMKM Indonesia.</p>
+</div>
+<div class="footer-cols">
+<div class="footer-col"><strong>Layanan</strong><a href="/ai-agent/">AI Agent</a><a href="/website/">Website</a></div>
+<div class="footer-col"><strong>Edukasi</strong><a href="/game/">Game</a><a href="/worksheet/">Worksheet</a><a href="/portofolio/">Portofolio</a></div>
+<div class="footer-col"><strong>Belajar</strong><a href="/berita/">Berita</a><a href="/tutorial/">Tutorial</a></div>
+<div class="footer-col"><strong>Ikuti</strong><a href="#" data-settings-href="instagram_url">Instagram</a><a href="#" data-settings-href="tiktok_url">TikTok</a></div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Bubblebss. Semua hak dilindungi.</div>
+</footer>
+
+<script src="../assets/settings.js"></script>
+<script src="../assets/articles.js"></script>
+<script>
+(async function () {
+  const grid = document.getElementById('website-grid');
+  function renderWebsiteCard(item) {
+    const isNavy = item.style === 'navy';
+    const cardClass = isNavy ? 'website-card website-card-navy' : 'website-card website-card-white';
+    const checkStroke = isNavy ? '#F97316' : '#1E3FAE';
+    const btnClass = isNavy ? 'btn btn-orange' : 'btn btn-primary';
+    const features = (item.features || []).map(f => `<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${checkStroke}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>${f}</li>`).join('');
+    const badge = item.badge ? `<span class="website-badge">${item.badge}</span>` : '';
+    return `
+      <div class="${cardClass}">
+        <div class="website-head">
+          <div><h3>${item.title}</h3><span class="website-sub">${item.excerpt}</span></div>
+          ${badge}
+        </div>
+        <strong class="website-price">Rp${item.price}</strong>
+        <ul class="agent-list">${features}</ul>
+        <a href="/#kontak" class="${btnClass}" style="margin-top:auto">${item.cta_label}</a>
+      </div>`;
+  }
+  try {
+    const items = await loadManifest('manifest.json');
+    if (!items.length) { grid.innerHTML = '<p class="empty-state">Belum ada paket Website.</p>'; return; }
+    grid.innerHTML = items.map(renderWebsiteCard).join('');
+  } catch (e) {
+    grid.innerHTML = '<p class="empty-state">Gagal memuat Website.</p>';
+  }
+})();
+</script>
+</body>
+</html>

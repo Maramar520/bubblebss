@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SECTIONS = ['berita', 'tutorial', 'game', 'worksheet', 'project'];
+const SECTIONS = ['berita', 'tutorial', 'game', 'worksheet', 'ai-agent', 'website', 'portofolio'];
+const INCLUDE_BODY = ['ai-agent', 'website'];
 
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
@@ -37,7 +38,8 @@ SECTIONS.forEach(section => {
       const raw = fs.readFileSync(path.join(contentDir, name), 'utf8');
       const { meta, body } = parseFrontmatter(raw);
       if (!meta.excerpt) meta.excerpt = firstParagraph(body);
-      return { slug, file: `content/${name}`, ...meta };
+      const extra = INCLUDE_BODY.includes(section) ? { features: body.trim().split(/\r?\n/).filter(Boolean) } : {};
+      return { slug, file: `content/${name}`, ...meta, ...extra };
     })
     .sort((a, b) => {
       const orderA = Number(a.order) || 999;

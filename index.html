@@ -2,8 +2,10 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<title>Bubblebss – AI Agent, Game &amp; Worksheet Edukasi Anak</title>
+<title>Bubblebss – AI Agent, Website, Game &amp; Worksheet</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Belajar & pakai AI untuk UMKM Indonesia: AI agent, website, game, worksheet, berita, dan tutorial AI.">
+<link rel="icon" href="assets/logo-bl.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">
@@ -13,15 +15,16 @@
 <header class="site-header">
 <nav class="nav container">
 <a href="#top" class="nav-brand">
-<svg width="52" height="52" viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="72" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="68" letter-spacing="-6" text-anchor="middle" fill="#14213D">BL</text></svg>
+<img src="assets/logo-bl.png" alt="Bubblebss" style="height:44px;width:auto;display:block">
 </a>
 <div class="nav-links">
-<a href="/ai-agent/">AI Agent</a>
-<a href="/project/">Project</a>
-<a href="/game/">Game Edukasi</a>
-<a href="/worksheet/">Worksheet</a>
-<a href="/berita/">Berita</a>
-<a href="/tutorial/">Tutorial</a>
+<a href="#ai-agent">AI Agent</a>
+<a href="#website">Website</a>
+<a href="#game">Game</a>
+<a href="#worksheet">Worksheet</a>
+<a href="#portofolio">Portofolio</a>
+<a href="#berita">Berita</a>
+<a href="#tutorial">Tutorial</a>
 <a href="#kontak" class="nav-cta">Konsultasi Gratis</a>
 </div>
 </nav>
@@ -31,12 +34,12 @@
 <section id="top" class="hero">
 <div class="hero-inner">
 <div class="hero-copy">
-<span class="hero-badge">Satu Bubblebss, Dua AI: Bisnis Melaju, Edukasi Makin Maju</span>
-<h1 class="hero-title">Satu AI, dua masa depan: bisnismu dan pendidikanmu.</h1>
-<p class="hero-desc">Bubblebss bikin AI agent yang bantu bisnis di berbagai sektor jalan lebih efisien, plus produk edukasi berbasis AI yang bikin proses belajar makin seru.</p>
+<span class="hero-badge" data-settings="hero_badge">Satu Bubblebss, Dua AI: Bisnis Melaju, Edukasi Makin Maju</span>
+<h1 class="hero-title" data-settings="hero_title">Satu AI, dua masa depan: bisnismu dan pendidikanmu.</h1>
+<p class="hero-desc" data-settings="hero_desc">Bubblebss bikin AI agent yang bantu bisnis di berbagai sektor jalan lebih efisien, plus produk edukasi berbasis AI yang bikin proses belajar makin seru.</p>
 <div class="hero-actions">
-<a href="/ai-agent/" class="btn btn-primary">Lihat AI Agent</a>
-<a href="/game/" class="btn btn-outline">Main Game Edukasi</a>
+<a href="#ai-agent" class="btn btn-primary">Lihat AI Agent</a>
+<a href="#game" class="btn btn-outline">Main Game Edukasi</a>
 </div>
 </div>
 <div class="hero-grid">
@@ -46,14 +49,14 @@
 <span class="desc">Admin chat, stok, sampai laporan harian.</span>
 </div>
 <div class="hero-card hero-card-navy offset">
-<span class="hero-icon" style="background:#F97316"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M10 9l5 3-5 3z"></path></svg></span>
+<span class="hero-icon" style="background:#F97316"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M9 14l-2 2 2 2M15 14l2 2-2 2"></path></svg></span>
 <strong>Website</strong>
-<span class="desc" style="color:#C9D3E8">Landing page & company profile, siap tayang.</span>
+<span class="desc" style="color:#C9D3E8">Landing page &amp; website toko, cepat jadi.</span>
 </div>
 <div class="hero-card hero-card-orange">
 <span class="hero-icon" style="background:#FFFFFF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B4500F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5"></rect><path d="M7 11v3M5.5 12.5h3"></path><circle cx="16" cy="11.5" r="1"></circle><circle cx="18" cy="14" r="1"></circle></svg></span>
-<strong>Game Edukasi</strong>
-<span class="desc" style="color:#5A3A20">Petualangan 3D buat anak SD.</span>
+<strong>Game</strong>
+<span class="desc" style="color:#5A3A20">Petualangan 3D yang seru dan mendidik.</span>
 </div>
 <div class="hero-card hero-card-white offset">
 <span class="hero-icon" style="background:#E6EDFD"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E3FAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg></span>
@@ -70,44 +73,8 @@
 <span class="eyebrow eyebrow-blue">AI Agent</span>
 <h2 class="section-title">Karyawan AI yang kerja 24 jam, tanpa gaji bulanan yang bikin pusing.</h2>
 </div>
-<div class="agent-grid">
-
-<div class="agent-card agent-card-white">
-<div class="agent-head">
-<span class="agent-icon" style="background:#2F5BEA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"></path><path d="M4 9v11h16V9"></path><path d="M9 20v-6h6v6"></path></svg></span>
-<h3>AI Agent UMKM</h3>
-</div>
-<p class="desc">Buat toko online di Shopee, TikTok Shop, dan WhatsApp. Agent jawab chat pembeli, catat pesanan, cek stok, dan kirim laporan ke HP kamu.</p>
-<ul class="agent-list">
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3FAE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Admin chat otomatis, balas pembeli dalam hitungan detik</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3FAE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Rekap pesanan, stok, dan pengeluaran otomatis</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3FAE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Laporan harian via Telegram atau WhatsApp</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3FAE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Pengingat follow-up pembeli yang belum checkout</li>
-</ul>
-<div class="agent-footer">
-<div><span class="price-label">Mulai dari</span><br><strong>Rp[HARGA]/bulan</strong></div>
-<a href="#kontak" class="btn btn-sm btn-primary">Pasang di Toko Saya</a>
-</div>
-</div>
-
-<div class="agent-card agent-card-navy">
-<div class="agent-head">
-<span class="agent-icon" style="background:#F97316"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M10 9l5 3-5 3z"></path></svg></span>
-<h3>AI Agent Content Creator</h3>
-</div>
-<p class="desc">Nggak ada ide konten lagi? Agent ini bikinin rencana konten sebulan, naskah video TikTok dan Reels, caption, sampai naskah live jualan.</p>
-<ul class="agent-list">
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Kalender konten 30 hari sesuai produk kamu</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Naskah video pendek dengan hook 3 detik pertama</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Caption, hashtag, dan copy promo siap posting</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Naskah live TikTok plus jawaban pertanyaan pembeli</li>
-</ul>
-<div class="agent-footer">
-<div><span class="price-label">Mulai dari</span><br><strong>Rp[HARGA]/bulan</strong></div>
-<a href="#kontak" class="btn btn-sm btn-orange">Coba Bikin Konten</a>
-</div>
-</div>
-
+<div id="ai-agent-grid" class="agent-grid">
+<p class="empty-state">Memuat AI Agent…</p>
 </div>
 
 <div class="howto">
@@ -120,33 +87,77 @@
 </div>
 </section>
 
-<!-- GAME teaser -->
-<section class="game-section">
-<div class="section container" style="padding:96px 24px">
+<!-- WEBSITE -->
+<section id="website" class="hero">
+<div class="section container">
+<div class="section-head">
+<span class="eyebrow eyebrow-blue">Website</span>
+<h2 class="section-title">Website bisnis yang rapi, cepat, dan enak dibuka di HP.</h2>
+<p class="section-lede">Dari landing page promo sampai website toko lengkap. Bisa sekalian dipasang AI agent biar pengunjung langsung dilayani.</p>
+</div>
+<div id="website-grid" class="agent-grid">
+<p class="empty-state">Memuat paket Website…</p>
+</div>
+</div>
+</section>
+
+<!-- GAME -->
+<section id="game" class="game-section">
+<div class="section">
 <div class="section-head-row">
 <div class="section-head">
 <span class="eyebrow" style="color:#B4500F">Game Edukasi</span>
 <h2 class="section-title">Belajar sains dan budaya lewat petualangan 3D.</h2>
 <p class="section-lede" style="color:#5A3A20">Dibuat khusus buat anak SD Indonesia. Main langsung di browser, nggak perlu install.</p>
 </div>
-<a href="/game/" class="btn btn-sm btn-primary">Lihat semua game →</a>
+<a href="#" class="btn btn-sm btn-orange">Lihat Semua di Lynk</a>
+</div>
+<p class="muted" style="margin:-8px 0 0">Yang tampil di sini demo gratisnya. Versi lengkap tiap game ada di Lynk.</p>
+
+<div class="target-note">
+<span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B4500F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5l3 2"></path></svg></span>
+<p><strong>Buat siapa Game Edukasi ini?</strong>Buat orang tua yang mau anaknya belajar sambil main, guru TK/SD yang cari media ajar interaktif di kelas, dan anak SD sebagai pemainnya langsung.</p>
+</div>
+
+<div id="game-grid" class="game-grid">
+<p class="empty-state">Memuat game…</p>
 </div>
 </div>
 </section>
 
-<!-- WORKSHEET teaser -->
-<section class="section">
+<!-- WORKSHEET -->
+<section id="worksheet" class="section">
 <div class="worksheet-section">
 <div class="worksheet-copy">
 <span class="eyebrow eyebrow-blue">Worksheet by Bubblearn</span>
 <h2 class="section-title">Lembar belajar seru, tinggal download dan print.</h2>
 <p class="section-lede">Format PDF ukuran A4. Cocok buat orang tua, guru TK/SD, dan les privat.</p>
-<a href="/worksheet/" class="btn btn-orange" style="align-self:flex-start;margin-top:8px">Lihat Semua Worksheet</a>
+<a href="#" class="btn btn-orange" style="align-self:flex-start;margin-top:8px">Lihat Semua di Lynk</a>
+</div>
+<div id="worksheet-grid" class="worksheet-grid">
+<p class="empty-state">Memuat worksheet…</p>
 </div>
 </div>
 </section>
 
-<!-- BERITA teaser -->
+<!-- PORTOFOLIO -->
+<section id="portofolio" class="portofolio-section">
+<div class="section">
+<div class="section-head-row">
+<div class="section-head">
+<span class="eyebrow" style="color:#F97316">Portofolio</span>
+<h2 class="section-title">Project yang udah kami kerjakan.</h2>
+<p class="section-lede" style="color:#C9D3E8">Semua dibangun dan dipakai sendiri dulu, baru ditawarkan ke kamu.</p>
+</div>
+<a href="#kontak" style="color:#FFFFFF;font-weight:700;padding:10px 0">Bikin project bareng →</a>
+</div>
+<div id="portofolio-grid" class="portofolio-grid">
+<p class="empty-state">Memuat portofolio…</p>
+</div>
+</div>
+</section>
+
+<!-- BERITA -->
 <section id="berita" class="berita-section">
 <div class="section">
 <div class="section-head-row">
@@ -156,17 +167,22 @@
 </div>
 <a href="/berita/" class="btn btn-sm btn-primary">Semua berita →</a>
 </div>
+<div id="news-grid" class="news-grid">
+<p class="empty-state">Memuat berita…</p>
+</div>
 </div>
 </section>
 
-<!-- TUTORIAL teaser -->
+<!-- TUTORIAL -->
 <section id="tutorial" class="section">
 <div class="section-head">
 <span class="eyebrow eyebrow-blue">Tutorial</span>
 <h2 class="section-title">Belajar pakai AI, step by step.</h2>
 <p class="section-lede">Panduan gratis, bahasa santai, langsung bisa dipraktikkan.</p>
 </div>
-<a href="/tutorial/" class="btn btn-sm btn-primary" style="align-self:flex-start">Lihat semua tutorial →</a>
+<div id="tutorial-list" class="tutorial-list">
+<p class="empty-state">Memuat tutorial…</p>
+</div>
 </section>
 
 <!-- CTA -->
@@ -174,11 +190,11 @@
 <div class="cta-box">
 <div class="cta-copy">
 <h2>Siap bikin bisnismu lebih ringan?</h2>
-<p>Konsultasi gratis 15 menit. Ceritain bisnismu, kita cariin AI agent yang paling pas.</p>
+<p>Konsultasi gratis 15 menit. Ceritain bisnismu, kita cariin AI agent atau website yang paling pas.</p>
 </div>
 <div class="cta-actions">
-<a href="#" class="btn btn-white">Chat WhatsApp [NOMOR]</a>
-<a href="#" class="btn btn-outline-white">Email Kami</a>
+<a href="#" class="btn btn-white" data-settings-href="whatsapp_number">Chat WhatsApp <span data-settings="whatsapp_number">[NOMOR]</span></a>
+<a href="#" class="btn btn-outline-white" data-settings-href="email">Email Kami</a>
 </div>
 </div>
 </section>
@@ -187,28 +203,158 @@
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-brand">
-<div class="footer-brand-row"><svg width="46" height="46" viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="72" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="68" letter-spacing="-6" text-anchor="middle" fill="#FFFFFF">BL</text></svg></div>
-<p>AI agent untuk UMKM dan konten edukasi untuk anak Indonesia.</p>
+<div class="footer-brand-row"><img src="assets/logo-bl-white.png" alt="Bubblebss" style="height:40px;width:auto;display:block"></div>
+<p>AI agent, website, dan tempat belajar AI untuk UMKM Indonesia.</p>
 </div>
 <div class="footer-cols">
-<div class="footer-col"><strong>Layanan</strong><a href="/ai-agent/">AI Agent</a><a href="/ai-agent/">AI Content Creator</a><a href="/project/">Project Kami</a></div>
-<div class="footer-col"><strong>Edukasi</strong><a href="/game/">Game Edukasi</a><a href="/worksheet/">Worksheet</a></div>
+<div class="footer-col"><strong>Layanan</strong><a href="#ai-agent">AI Agent</a><a href="#website">Website</a></div>
+<div class="footer-col"><strong>Edukasi</strong><a href="#game">Game</a><a href="#worksheet">Worksheet</a><a href="#portofolio">Portofolio</a></div>
 <div class="footer-col"><strong>Belajar</strong><a href="/berita/">Berita</a><a href="/tutorial/">Tutorial</a></div>
-<div class="footer-col"><strong>Ikuti</strong><a href="#">Instagram</a><a href="#">TikTok</a></div>
+<div class="footer-col"><strong>Ikuti</strong><a href="#" data-settings-href="instagram_url">Instagram</a><a href="#" data-settings-href="tiktok_url">TikTok</a></div>
 </div>
 </div>
 <div class="footer-bottom">© 2026 Bubblebss. Semua hak dilindungi.</div>
 </footer>
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="assets/settings.js"></script>
+<script src="assets/articles.js"></script>
 <script>
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on('init', user => {
-    if (!user) {
-      window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
+(async function () {
+  const chipClass = { 'AI Agent': 'chip-blue', 'Konten': 'chip-orange', 'Edukasi': 'chip-green', 'Website': 'chip-cyan' };
+  const thumbBg = { 'chip-green': '#DCF3E4', 'chip-blue': '#E6EDFD', 'chip-cyan': '#D9F0F5', 'chip-orange': '#FFF1E6' };
+  const thumbStroke = { 'chip-green': '#17643A', 'chip-blue': '#1E3FAE', 'chip-cyan': '#0E5A6B', 'chip-orange': '#B4500F' };
+
+  function renderAgentCard(item) {
+    const isNavy = item.style === 'navy';
+    const cardClass = isNavy ? 'agent-card agent-card-navy' : 'agent-card agent-card-white';
+    const iconBg = isNavy ? '#F97316' : '#2F5BEA';
+    const iconStroke = isNavy ? '#14213D' : '#FFFFFF';
+    const iconPath = isNavy
+      ? '<rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M10 9l5 3-5 3z"></path>'
+      : '<path d="M3 9l1.5-5h15L21 9"></path><path d="M4 9v11h16V9"></path><path d="M9 20v-6h6v6"></path>';
+    const checkStroke = isNavy ? '#F97316' : '#1E3FAE';
+    const btnClass = isNavy ? 'btn btn-sm btn-orange' : 'btn btn-sm btn-primary';
+    const features = (item.features || []).map(f => `<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${checkStroke}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>${f}</li>`).join('');
+    return `
+      <div class="${cardClass}">
+        <div class="agent-head">
+          <span class="agent-icon" style="background:${iconBg}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="${iconStroke}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconPath}</svg></span>
+          <h3>${item.title}</h3>
+        </div>
+        <p class="desc">${item.excerpt}</p>
+        <ul class="agent-list">${features}</ul>
+        <div class="agent-footer">
+          <div><span class="price-label">Mulai dari</span><br><strong>Rp${item.price}/bulan</strong></div>
+          <a href="#kontak" class="${btnClass}">${item.cta_label}</a>
+        </div>
+      </div>`;
+  }
+
+  function renderWebsiteCard(item) {
+    const isNavy = item.style === 'navy';
+    const cardClass = isNavy ? 'website-card website-card-navy' : 'website-card website-card-white';
+    const checkStroke = isNavy ? '#F97316' : '#1E3FAE';
+    const btnClass = isNavy ? 'btn btn-orange' : 'btn btn-primary';
+    const features = (item.features || []).map(f => `<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${checkStroke}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>${f}</li>`).join('');
+    const badge = item.badge ? `<span class="website-badge">${item.badge}</span>` : '';
+    return `
+      <div class="${cardClass}">
+        <div class="website-head">
+          <div><h3>${item.title}</h3><span class="website-sub">${item.excerpt}</span></div>
+          ${badge}
+        </div>
+        <strong class="website-price">Rp${item.price}</strong>
+        <ul class="agent-list">${features}</ul>
+        <a href="#kontak" class="${btnClass}" style="margin-top:auto">${item.cta_label}</a>
+      </div>`;
+  }
+
+  function renderPortofolioCard(item) {
+    const tags = (item.tags || '').split(',').map(t => t.trim()).filter(Boolean)
+      .map(t => `<span class="portofolio-tag">${t}</span>`).join('');
+    return `
+      <article class="portofolio-card">
+        <div class="portofolio-tags">${tags}</div>
+        <h3>${item.title}</h3>
+        <p>${item.excerpt}</p>
+        <span class="portofolio-tools">${item.tools}</span>
+        <a href="${item.link || '#'}" class="portofolio-link">Lihat detail →</a>
+      </article>`;
+  }
+
+  function renderGameCard(item) {
+    const thumb = item.image
+      ? `<img src="${item.image}" alt="${item.title}" style="width:100%;height:150px;object-fit:cover">`
+      : `<div class="game-thumb" style="background:${thumbBg[item.chip] || '#E6EDFD'}">
+           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="${thumbStroke[item.chip] || '#1E3FAE'}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5"></rect><path d="M7 11v3M5.5 12.5h3"></path><circle cx="16" cy="11.5" r="1"></circle><circle cx="18" cy="14" r="1"></circle></svg>
+         </div>`;
+    return `
+      <article class="game-card">
+        ${thumb}
+        <div class="game-body">
+          <span class="chip ${item.chip || 'chip-blue'}">${item.category}</span>
+          <h3>${item.title}</h3>
+          <p>${item.excerpt}</p>
+          <a href="${item.link || '#'}" class="game-link">${item.cta_label || 'Coba demo'} →</a>
+        </div>
+      </article>`;
+  }
+
+  async function run(id, path, mapper, emptyMsg, errMsg, after) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    try {
+      let items = await loadManifest(path);
+      if (after) items = after(items);
+      if (!items.length) { el.innerHTML = `<p class="empty-state">${emptyMsg}</p>`; return; }
+      el.innerHTML = items.map(mapper).join('');
+    } catch (e) {
+      el.innerHTML = `<p class="empty-state">${errMsg}</p>`;
+    }
+  }
+
+  run('ai-agent-grid', 'ai-agent/manifest.json', renderAgentCard, 'Belum ada paket AI Agent.', 'Gagal memuat AI Agent.');
+  run('website-grid', 'website/manifest.json', renderWebsiteCard, 'Belum ada paket Website.', 'Gagal memuat Website.');
+  run('game-grid', 'game/manifest.json', renderGameCard, 'Belum ada game.', 'Gagal memuat daftar game.');
+  run('portofolio-grid', 'portofolio/manifest.json', renderPortofolioCard, 'Belum ada portofolio.', 'Gagal memuat portofolio.');
+
+  run('worksheet-grid', 'worksheet/manifest.json', item => `
+      <div class="worksheet-card">
+        ${item.image ? `<img src="${item.image}" alt="${item.title}" style="width:100%;border-radius:12px;margin-bottom:4px">` : ''}
+        <strong class="title">${item.title}</strong>
+        <span class="desc">${item.excerpt}</span>
+        <div class="worksheet-price-row"><strong>Rp${item.price}</strong><a href="${item.link || '#'}">Beli</a></div>
+      </div>
+    `, 'Belum ada worksheet.', 'Gagal memuat daftar worksheet.', items => items).then(() => {
+    const grid = document.getElementById('worksheet-grid');
+    if (grid && !grid.querySelector('.empty-state')) {
+      grid.insertAdjacentHTML('beforeend', `
+        <div class="worksheet-bundle">
+          <div><strong>Paket Bundling Semua Kategori</strong><div class="label">Lebih hemat buat yang mau lengkap sekaligus.</div></div>
+          <a href="#" class="btn btn-sm btn-white">Rp[HARGA] · Ambil Paket</a>
+        </div>
+      `);
     }
   });
-}
+
+  run('news-grid', 'berita/manifest.json', item => `
+      <article class="news-card">
+        ${item.image ? `<img src="${item.image}" alt="${item.title}" style="width:100%;border-radius:14px">` : ''}
+        <div class="news-meta"><span class="cat">${item.category}</span><span>·</span><span>${item.date}</span></div>
+        <h3>${item.title}</h3>
+        <p>${item.excerpt}</p>
+        <a class="read-more" href="/berita/artikel.html?slug=${encodeURIComponent(item.slug)}">Baca selengkapnya</a>
+      </article>
+    `, 'Belum ada berita.', 'Gagal memuat daftar berita.', items => items.slice(0, 3));
+
+  run('tutorial-list', 'tutorial/manifest.json', item => `
+      <a class="tutorial-row" href="/tutorial/artikel.html?slug=${encodeURIComponent(item.slug)}">
+        <span class="chip ${chipClass[item.category] || 'chip-blue'}">${item.category}</span>
+        <strong>${item.title}</strong>
+        <span class="meta">${item.level} · ${item.duration} menit</span>
+      </a>
+    `, 'Belum ada tutorial.', 'Gagal memuat daftar tutorial.');
+})();
 </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "landing-page",
+    "file": "content/landing-page.md",
+    "title": "Landing Page",
+    "excerpt": "Satu halaman buat promo produk atau jasa.",
+    "price": "[HARGA]",
+    "cta_label": "Pesan Landing Page",
+    "style": "white",
+    "badge": "",
+    "order": "1",
+    "features": [
+      "Desain custom sesuai brand",
+      "Tombol WhatsApp & link marketplace",
+      "Tampil rapi di HP",
+      "Selesai [DURASI] hari kerja"
+    ]
+  },
+  {
+    "slug": "website-umkm",
+    "file": "content/website-umkm.md",
+    "title": "Website UMKM",
+    "excerpt": "Beberapa halaman: profil, katalog, artikel.",
+    "price": "[HARGA]",
+    "cta_label": "Pesan Website UMKM",
+    "style": "navy",
+    "badge": "Paling pas",
+    "order": "2",
+    "features": [
+      "Halaman profil, katalog produk, dan kontak",
+      "Blog/berita biar gampang ketemu di Google",
+      "Bantuan setup domain",
+      "Revisi [JUMLAH] kali"
+    ]
+  },
+  {
+    "slug": "website-ai-agent",
+    "file": "content/website-ai-agent.md",
+    "title": "Website + AI Agent",
+    "excerpt": "Website lengkap yang bisa jawab pengunjung sendiri.",
+    "price": "[HARGA]",
+    "cta_label": "Konsultasi Dulu",
+    "style": "white",
+    "badge": "",
+    "order": "3",
+    "features": [
+      "Semua isi paket Website UMKM",
+      "Chat AI di website, jawab pertanyaan 24 jam",
+      "Form pesanan masuk langsung ke WhatsApp",
+      "Maintenance bulanan"
+    ]
+  }
+]

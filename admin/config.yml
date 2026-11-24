@@ -60,6 +60,7 @@ collections:
       - { label: "Warna chip", name: "chip", widget: "select", options: ["chip-green", "chip-blue", "chip-cyan", "chip-orange"] }
       - { label: "Status", name: "status", widget: "select", options: ["demo", "segera"] }
       - { label: "Teks tombol", name: "cta_label", widget: "string", default: "Coba demo" }
+      - { label: "Link main game", name: "link", widget: "string", default: "#", hint: "URL game-nya, kosongkan/pakai # kalau belum ada" }
       - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
       - { label: "Gambar thumbnail", name: "image", widget: "image", required: false }
       - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
@@ -75,27 +76,74 @@ collections:
     fields:
       - { label: "Judul Worksheet", name: "title", widget: "string" }
       - { label: "Harga (angka saja)", name: "price", widget: "string", hint: "Contoh: 25000" }
+      - { label: "Link Lynk", name: "link", widget: "string", default: "#", hint: "Link beli di Lynk, kosongkan/pakai # kalau belum ada" }
       - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
       - { label: "Gambar sampul", name: "image", widget: "image", required: false }
       - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
       - { label: "Deskripsi lengkap (opsional)", name: "body", widget: "markdown", required: false }
 
-  - name: "project"
-    label: "Project Kami"
-    folder: "project/content"
+  - name: "ai-agent"
+    label: "AI Agent"
+    folder: "ai-agent/content"
     create: true
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Nama Project", name: "title", widget: "string" }
-      - { label: "Kategori", name: "category", widget: "string" }
-      - { label: "Warna chip", name: "chip", widget: "select", options: ["chip-green", "chip-blue", "chip-cyan", "chip-orange"] }
-      - { label: "Label statistik 1", name: "stat1_label", widget: "string", default: "Hasil" }
-      - { label: "Nilai statistik 1", name: "stat1_value", widget: "string" }
-      - { label: "Label statistik 2", name: "stat2_label", widget: "string", default: "Hasil" }
-      - { label: "Nilai statistik 2", name: "stat2_value", widget: "string" }
+      - { label: "Nama Paket", name: "title", widget: "string" }
+      - { label: "Deskripsi singkat", name: "excerpt", widget: "text" }
+      - { label: "Harga (angka saja)", name: "price", widget: "string", hint: "Contoh: 299000" }
+      - { label: "Teks tombol", name: "cta_label", widget: "string", default: "Konsultasi Dulu" }
+      - { label: "Warna card", name: "style", widget: "select", options: ["white", "navy"], default: "white" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Gambar (opsional)", name: "image", widget: "image", required: false }
+      - { label: "Daftar fitur (satu baris = satu fitur)", name: "body", widget: "text" }
+
+  - name: "website"
+    label: "Website"
+    folder: "website/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Nama Paket", name: "title", widget: "string" }
+      - { label: "Deskripsi singkat", name: "excerpt", widget: "text" }
+      - { label: "Harga (angka saja)", name: "price", widget: "string", hint: "Contoh: 1500000" }
+      - { label: "Badge (opsional)", name: "badge", widget: "string", required: false, hint: "Contoh: Paling pas" }
+      - { label: "Teks tombol", name: "cta_label", widget: "string", default: "Konsultasi Dulu" }
+      - { label: "Warna card", name: "style", widget: "select", options: ["white", "navy"], default: "white" }
+      - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
+      - { label: "Daftar fitur (satu baris = satu fitur)", name: "body", widget: "text" }
+
+  - name: "portofolio"
+    label: "Portofolio"
+    folder: "portofolio/content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Judul Project", name: "title", widget: "string" }
+      - { label: "Tag (pisah pakai koma)", name: "tags", widget: "string", hint: "Contoh: AI Agent, Otomasi" }
+      - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
+      - { label: "Tools dipakai", name: "tools", widget: "string", hint: "Contoh: n8n · PostgreSQL" }
+      - { label: "Link detail", name: "link", widget: "string", default: "#" }
       - { label: "Urutan tampil", name: "order", widget: "number", default: 1 }
       - { label: "Gambar/screenshot", name: "image", widget: "image", required: false }
-      - { label: "Deskripsi singkat", name: "excerpt", widget: "text", required: false, hint: "Kosongkan untuk pakai paragraf pertama otomatis" }
       - { label: "Ceritanya (opsional)", name: "body", widget: "markdown", required: false }
+
+  - name: "settings"
+    label: "Pengaturan Situs"
+    files:
+      - file: "data/settings.json"
+        label: "Umum"
+        name: "general"
+        fields:
+          - { label: "Badge/slogan hero", name: "hero_badge", widget: "string" }
+          - { label: "Judul besar hero", name: "hero_title", widget: "string" }
+          - { label: "Deskripsi hero", name: "hero_desc", widget: "text" }
+          - { label: "Nomor WhatsApp", name: "whatsapp_number", widget: "string", hint: "Format internasional tanpa + atau 0 di depan, contoh: 6281234567890" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Link Instagram", name: "instagram_url", widget: "string" }
+          - { label: "Link TikTok", name: "tiktok_url", widget: "string" }

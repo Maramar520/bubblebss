@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "ai-agent-umkm",
+    "file": "content/ai-agent-umkm.md",
+    "title": "AI Agent UMKM",
+    "excerpt": "Buat toko online di Shopee, TikTok Shop, dan WhatsApp. Agent jawab chat pembeli, catat pesanan, cek stok, dan kirim laporan ke HP kamu.",
+    "price": "[HARGA]",
+    "cta_label": "Pasang di Toko Saya",
+    "style": "white",
+    "order": "1",
+    "image": "",
+    "features": [
+      "Admin chat otomatis, balas pembeli dalam hitungan detik",
+      "Rekap pesanan, stok, dan pengeluaran otomatis",
+      "Laporan harian via Telegram atau WhatsApp",
+      "Pengingat follow-up pembeli yang belum checkout"
+    ]
+  },
+  {
+    "slug": "ai-agent-content-creator",
+    "file": "content/ai-agent-content-creator.md",
+    "title": "AI Agent Content Creator",
+    "excerpt": "Nggak ada ide konten lagi? Agent ini bikinin rencana konten sebulan, naskah video TikTok dan Reels, caption, sampai naskah live jualan.",
+    "price": "[HARGA]",
+    "cta_label": "Coba Bikin Konten",
+    "style": "navy",
+    "order": "2",
+    "image": "",
+    "features": [
+      "Kalender konten 30 hari sesuai produk kamu",
+      "Naskah video pendek dengan hook 3 detik pertama",
+      "Caption, hashtag, dan copy promo siap posting",
+      "Naskah live TikTok plus jawaban pertanyaan pembeli"
+    ]
+  }
+]

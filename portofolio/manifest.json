@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "ai-office-bisnis-cat",
+    "file": "content/ai-office-bisnis-cat.md",
+    "title": "AI Office untuk Bisnis Cat",
+    "tags": "AI Agent, Otomasi",
+    "excerpt": "Tim AI agent untuk pabrik dan toko cat: sales, logistik, produksi, dan keuangan. Laporan masuk lewat bot Telegram dan dashboard kantor.",
+    "tools": "n8n · PostgreSQL · Telegram",
+    "link": "#",
+    "order": "1",
+    "image": ""
+  },
+  {
+    "slug": "sistem-stok-produksi",
+    "file": "content/sistem-stok-produksi.md",
+    "title": "Sistem Stok & Produksi Otomatis",
+    "tags": "AI Agent, Sistem Stok",
+    "excerpt": "Stok bahan baku dan barang jadi tercatat otomatis, nyambung ke pesanan Shopee dan TikTok Shop.",
+    "tools": "n8n · PostgreSQL",
+    "link": "#",
+    "order": "2",
+    "image": ""
+  },
+  {
+    "slug": "website-bubblebss",
+    "file": "content/website-bubblebss.md",
+    "title": "Website Bubblebss",
+    "tags": "Website",
+    "excerpt": "Landing page yang lagi kamu buka ini: layanan, katalog produk digital, berita, dan tutorial dalam satu halaman.",
+    "tools": "HTML · CSS · Desain responsif",
+    "link": "/",
+    "order": "3",
+    "image": ""
+  },
+  {
+    "slug": "4-game-edukasi-3d",
+    "file": "content/4-game-edukasi-3d.md",
+    "title": "4 Game Edukasi 3D",
+    "tags": "Game",
+    "excerpt": "Science Village, Cosmic Science Adventure, Petualangan Nusantara, dan Luminera. Semua bisa dimainkan di browser.",
+    "tools": "Three.js · Web game",
+    "link": "/game/",
+    "order": "4",
+    "image": ""
+  },
+  {
+    "slug": "bubblearn-worksheet",
+    "file": "content/bubblearn-worksheet.md",
+    "title": "Bubblearn Worksheet",
+    "tags": "Worksheet",
+    "excerpt": "Brand produk digital lembar belajar anak, dari desain logo sampai katalog yang dijual di Lynk.",
+    "tools": "Branding · Produk digital",
+    "link": "/worksheet/",
+    "order": "5",
+    "image": ""
+  },
+  {
+    "slug": "konten-edukasi-cat",
+    "file": "content/konten-edukasi-cat.md",
+    "title": "Konten Edukasi Produk Cat",
+    "tags": "Konten",
+    "excerpt": "Video edukasi dan promosi cat di TikTok dan Instagram, dibantu AI dari ide sampai naskah.",
+    "tools": "TikTok · Instagram",
+    "link": "#",
+    "order": "6",
+    "image": ""
+  },
+  {
+    "slug": "project-fashion",
+    "file": "content/project-fashion.md",
+    "title": "[NAMA PROJECT]",
+    "tags": "Fashion, AI Agent",
+    "excerpt": "Toko fashion online yang admin chat-nya tadinya kewalahan balas pesan di jam sibuk. Sekarang dibantu AI Agent buat jawab chat dan catat pesanan otomatis.",
+    "tools": "AI Agent",
+    "link": "#",
+    "order": "7",
+    "image": ""
+  },
+  {
+    "slug": "project-fnb",
+    "file": "content/project-fnb.md",
+    "title": "[NAMA PROJECT]",
+    "tags": "F&B, Konten",
+    "excerpt": "Usaha makanan rumahan yang kesulitan bikin konten promosi tiap hari. Sekarang jadwal konten dan naskah TikTok-nya dibikinin AI Content Creator.",
+    "tools": "AI Content Creator",
+    "link": "#",
+    "order": "8",
+    "image": ""
+  },
+  {
+    "slug": "project-retail",
+    "file": "content/project-retail.md",
+    "title": "[NAMA PROJECT]",
+    "tags": "Retail, Sistem Stok",
+    "excerpt": "Toko kelontong online yang stoknya sering nggak sinkron dengan pesanan. Sekarang laporan stok dan penjualan masuk otomatis tiap hari ke Telegram pemilik.",
+    "tools": "AI Agent",
+    "link": "#",
+    "order": "9",
+    "image": ""
+  }
+]

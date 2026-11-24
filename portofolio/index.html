@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Portofolio – Bubblebss</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+<nav class="nav container">
+<a href="/" class="nav-brand">
+<img src="../assets/logo-bl.png" alt="Bubblebss" style="height:44px;width:auto;display:block">
+</a>
+<div class="nav-links">
+<a href="/ai-agent/">AI Agent</a>
+<a href="/website/">Website</a>
+<a href="/game/">Game</a>
+<a href="/worksheet/">Worksheet</a>
+<a href="/portofolio/">Portofolio</a>
+<a href="/berita/">Berita</a>
+<a href="/tutorial/">Tutorial</a>
+<a href="/#kontak" class="nav-cta">Konsultasi Gratis</a>
+</div>
+</nav>
+</header>
+
+<section class="portofolio-section">
+<div class="section">
+<div class="section-head-row">
+<div class="section-head">
+<span class="eyebrow" style="color:#F97316">Portofolio</span>
+<h2 class="section-title">Project yang udah kami kerjakan.</h2>
+<p class="section-lede" style="color:#C9D3E8">Semua dibangun dan dipakai sendiri dulu, baru ditawarkan ke kamu.</p>
+</div>
+<a href="/#kontak" style="color:#FFFFFF;font-weight:700;padding:10px 0">Bikin project bareng →</a>
+</div>
+<div id="portofolio-grid" class="portofolio-grid">
+<p class="empty-state">Memuat portofolio…</p>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-brand-row"><img src="../assets/logo-bl-white.png" alt="Bubblebss" style="height:40px;width:auto;display:block"></div>
+<p>AI agent, website, dan tempat belajar AI untuk UMKM Indonesia.</p>
+</div>
+<div class="footer-cols">
+<div class="footer-col"><strong>Layanan</strong><a href="/ai-agent/">AI Agent</a><a href="/website/">Website</a></div>
+<div class="footer-col"><strong>Edukasi</strong><a href="/game/">Game</a><a href="/worksheet/">Worksheet</a><a href="/portofolio/">Portofolio</a></div>
+<div class="footer-col"><strong>Belajar</strong><a href="/berita/">Berita</a><a href="/tutorial/">Tutorial</a></div>
+<div class="footer-col"><strong>Ikuti</strong><a href="#" data-settings-href="instagram_url">Instagram</a><a href="#" data-settings-href="tiktok_url">TikTok</a></div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Bubblebss. Semua hak dilindungi.</div>
+</footer>
+
+<script src="../assets/settings.js"></script>
+<script src="../assets/articles.js"></script>
+<script>
+(async function () {
+  const grid = document.getElementById('portofolio-grid');
+  function renderPortofolioCard(item) {
+    const tags = (item.tags || '').split(',').map(t => t.trim()).filter(Boolean)
+      .map(t => `<span class="portofolio-tag">${t}</span>`).join('');
+    return `
+      <article class="portofolio-card">
+        <div class="portofolio-tags">${tags}</div>
+        <h3>${item.title}</h3>
+        <p>${item.excerpt}</p>
+        <span class="portofolio-tools">${item.tools}</span>
+        <a href="${item.link || '#'}" class="portofolio-link">Lihat detail →</a>
+      </article>`;
+  }
+  try {
+    const items = await loadManifest('manifest.json');
+    if (!items.length) { grid.innerHTML = '<p class="empty-state">Belum ada portofolio.</p>'; return; }
+    grid.innerHTML = items.map(renderPortofolioCard).join('');
+  } catch (e) {
+    grid.innerHTML = '<p class="empty-state">Gagal memuat portofolio.</p>';
+  }
+})();
+</script>
+</body>
+</html>
