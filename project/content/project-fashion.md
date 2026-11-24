@@ -10,4 +10,4 @@ order: 1
 image: ""
 ---
 
-Toko fashion online yang admin chat-nya tadinya kewalahan balas pesan di jam sibuk. Sekarang dibantu AI Agent UMKM buat jawab chat dan catat pesanan otomatis.
+Toko fashion online yang admin chat-nya tadinya kewalahan balas pesan di jam sibuk. Sekarang dibantu AI Agent buat jawab chat dan catat pesanan otomatis.
