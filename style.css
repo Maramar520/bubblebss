@@ -52,9 +52,11 @@ ul{margin:0;padding:0;list-style:none}
 
 @media (max-width:760px){
   .nav-toggle{display:block}
-  .nav-links{display:none;flex-direction:column;align-items:flex-start;width:100%;gap:8px;padding-top:12px}
+  .nav-links{display:none;flex-direction:column;align-items:stretch;width:100%;gap:0;margin-top:12px;background:#FFFFFF;border:1px solid var(--border);border-radius:16px;padding:4px 16px;box-shadow:0 8px 24px rgba(20,33,61,0.08)}
   .nav-links.open{display:flex}
-  .nav-links a.nav-cta{margin-top:8px;align-self:flex-start}
+  .nav-links a{padding:14px 0;border-bottom:1px solid var(--border)}
+  .nav-links a:last-of-type{border-bottom:none}
+  .nav-links a.nav-cta{margin:12px 0;align-self:stretch;text-align:center;border-bottom:none}
 }
 
 /* BUTTONS */
